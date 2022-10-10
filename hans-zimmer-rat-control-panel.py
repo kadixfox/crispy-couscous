@@ -19,10 +19,6 @@ async def on_message(message):
     if message.author.id==rat.user.id:
         return
 
-    # its a work in progress of course
-    if 'torvalds' in message.content.lower():
-        await message.channel.send('We\'re working on it!')
-
     # require raccoon to begin orders
     if message.content.startswith(raccoon):
         order=message.content.split(' ',1)[0][1:]
