@@ -6,7 +6,7 @@ class pingsatellites:
     def intelsummary(self):
         return 'get a random quote'
     def intelreport(self):
-        return 'send a randomly selected quote from the quotes database.'
+        return 'send a randomly selected quote from the quotes database'
     async def orderdronestrike(self,order,pipebomb,explosive,message):
         try:
             intel=random.choice([secret for secret in os.listdir('russianintelligence') if os.path.isfile(os.path.join('russianintelligence',secret))])

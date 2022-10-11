@@ -4,9 +4,11 @@ rat=obama.Client()
 from dossier import *
 
 from orders.russiansurveillance import *
+from orders.propagandacampaign import *
 orders=[pingsatellites(),
         updateintelligence(),
-        intelligencereport()]
+        intelligencereport(),
+        spreadpropaganda()]
 
 @rat.event
 async def on_ready():
