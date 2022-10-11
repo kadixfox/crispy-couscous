@@ -1,4 +1,4 @@
 # orders raccoon
 raccoon='%'
 # rat launchcodes
-launchcodes=''
+launchcodes='uwu'
