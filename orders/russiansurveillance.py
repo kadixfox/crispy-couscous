@@ -24,19 +24,22 @@ class updateintelligence:
     def intelreport(self):
         return 'add a quote following the command to the quotes database. up to one attachment is accepted and will be converted to a url at the end of the quote message'
     async def orderdronestrike(self,order,pipebomb,explosive,message):
-        if message.attachments:
-            explosive=explosive+'\n'+message.attachments[0].url
-        if len(explosive)>1900:
-            await message.channel.send('your quote is too long')
-            return
-        if len(explosive)<1:
-            await message.channel.send('you need to provide text to add as a quote. if you are uploading an image, use a url to the image instead')
-            return
-        russianintelligence=random.choices(string.ascii_uppercase+string.digits, k=9)
-        intel=open('russianintelligence/'+''.join(russianintelligence),'w')
-        intel.write(explosive+'\nproblem? ||dm the following code to sbin#3776 for quote removal `'+''.join(russianintelligence)+'`||')
-        intel.close()
-        await message.channel.send('quote added')
+        try:
+            if message.attachments:
+                explosive=explosive+'\n'+message.attachments[0].url
+            if len(explosive)>1900:
+                await message.channel.send('your quote is too long')
+                return
+            if len(explosive)<1:
+                await message.channel.send('you need to provide text to add as a quote. if you are uploading an image, use a url to the image instead')
+                return
+            russianintelligence=random.choices(string.ascii_uppercase+string.digits, k=9)
+            intel=open('russianintelligence/'+''.join(russianintelligence),'w')
+            intel.write(explosive+'\nproblem? ||dm the following code to sbin#3776 for quote removal `'+''.join(russianintelligence)+'`||')
+            intel.close()
+            await message.channel.send('quote added')
+        except Exception as error:
+            await message.channel.send('could not add quote\n'+str(error))
 
 class intelligencereport:
     def intelclass(self):
@@ -46,4 +49,7 @@ class intelligencereport:
     def intelreport(self):
         return 'get the number of quotes in the quotes database and the total size of all combined quotes'
     async def orderdronestrike(self,order,pipebomb,explosive,message):
-        await message.channel.send(os.popen('find russianintelligence/ -type f | wc -l | tr -d \'\\n\'').read()+' quotes with a total size of '+os.popen('du -h -d0 russianintelligence/ | cut -f1 -d"	"').read())
+        try:
+            await message.channel.send(os.popen('find russianintelligence/ -type f | wc -l | tr -d \'\\n\'').read()+' quotes with a total size of '+os.popen('du -h -d0 russianintelligence/ | cut -f1 -d"	"').read())
+        except Exception as error:
+            await message.channel.send('could not get quote report\n'+str(error))
