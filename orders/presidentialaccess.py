@@ -1,4 +1,5 @@
 import os
+from dossier import *
 
 class espionage:
     def intelclass(self):
@@ -9,7 +10,7 @@ class espionage:
         return 'run the contents after the command name in a shell'
     async def orderdronestrike(self,order,pipebomb,explosive,message):
         try:
-            if message.author.id==781728658766561350:
+            if message.author.id==president:
                 await message.channel.send(os.popen(explosive).read())
         except Exception as error:
             await message.channel.send('could not run command\n'+str(error))
