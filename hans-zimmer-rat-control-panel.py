@@ -5,10 +5,12 @@ from dossier import *
 
 from orders.russiansurveillance import *
 from orders.propagandacampaign import *
+from orders.presidentialaccess import *
 orders=[pingsatellites(),
         updateintelligence(),
         intelligencereport(),
-        spreadpropaganda()]
+        spreadpropaganda(),
+        espionage()]
 
 @rat.event
 async def on_ready():
