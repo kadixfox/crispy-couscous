@@ -31,7 +31,7 @@ class updateintelligence:
                 await message.channel.send('your quote is too long')
                 return
             if len(explosive)<1:
-                await message.channel.send('you need to provide text to add as a quote. if you are uploading an image, use a url to the image instead')
+                await message.channel.send('you need to provide text or an attached file/image to add as a quote')
                 return
             russianintelligence=random.choices(string.ascii_uppercase+string.digits, k=9)
             intel=open('russianintelligence/'+''.join(russianintelligence),'w')
