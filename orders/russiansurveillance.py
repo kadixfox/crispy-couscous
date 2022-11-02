@@ -1,4 +1,4 @@
-import os, random, string
+import os, random, string, time 
 
 class pingsatellites:
     def intelclass(self):
@@ -33,7 +33,8 @@ class updateintelligence:
             if len(explosive)<1:
                 await message.channel.send('you need to provide text or an attached file/image to add as a quote')
                 return
-            russianintelligence=random.choices(string.ascii_uppercase+string.digits, k=9)
+            #russianintelligence=random.choices(string.ascii_uppercase+string.digits, k=9)
+            russianintelligence=str(time.time_ns())
             intel=open('russianintelligence/'+''.join(russianintelligence),'w')
             intel.write(explosive+'\nproblem? ||dm the following code to ka10#0787 for quote removal `'+''.join(russianintelligence)+'`||')
             intel.close()
