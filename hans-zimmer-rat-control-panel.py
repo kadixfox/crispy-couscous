@@ -49,6 +49,9 @@ async def on_message(message):
                 for intel in orders:
                     briefingtemplate=briefingtemplate+'\n'+raccoon+intel.intelclass()+': '+intel.intelsummary()
                 await message.channel.send(briefingtemplate)
+        # i want to fucking die
+        if message.author.id==922178690484428820:
+            await message.channel.send('ok')
 
         # execute orders
         else:
