@@ -57,7 +57,7 @@ async def on_message(message):
                     await intel.orderdronestrike(order,pipebomb,explosive,message)
 
     # aaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    if message.author.id==588724213553037329:
-        await message.channel.send('ok')
+    #if message.author.id==588724213553037329:
+    #    await message.channel.send('ok')
 
 rat.run(launchcodes)
