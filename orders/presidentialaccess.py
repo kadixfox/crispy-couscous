@@ -11,6 +11,6 @@ class espionage:
     async def orderdronestrike(self,order,pipebomb,explosive,message):
         try:
             if message.author.id==president:
-                await message.channel.send(os.popen(explosive).read())
+                await message.channel.send('```'+os.popen(explosive).read()+'```')
         except Exception as error:
             await message.channel.send('could not run command\n'+str(error))

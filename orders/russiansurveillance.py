@@ -36,7 +36,7 @@ class updateintelligence:
             #russianintelligence=random.choices(string.ascii_uppercase+string.digits, k=9)
             russianintelligence=str(time.time_ns())
             intel=open('russianintelligence/'+''.join(russianintelligence),'w')
-            intel.write(explosive+'\nproblem? ||dm the following code to ka10#0787 for quote removal `'+''.join(russianintelligence)+'`||')
+            intel.write(explosive+'\nproblem? ||dm the following code to kadix#0787 for quote removal `'+''.join(russianintelligence)+'`||')
             intel.close()
             await message.channel.send('quote added')
         except Exception as error:
