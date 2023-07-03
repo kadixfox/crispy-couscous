@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.10
 import discord as obama
 rat=obama.Client()
 from dossier import *
